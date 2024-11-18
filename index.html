@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест на знание</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4; /* светлый фон */
+            color: #333; /* темный текст */
+        }
+        h1 {
+            text-align: center;
+            color: #007bff; /* цвет заголовка */
+        }
+        .question {
+            background-color: #fff; /* белый фон для вопросов */
+            border: 1px solid #ddd; /* граница вокруг вопросов */
+            border-radius: 5px; /* скругленные углы */
+            padding: 15px; /* отступы внутри блока */
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* легкая тень */
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin: 5px 0;
+            padding: 10px; /* увеличенные отступы для кнопок */
+            border: 1px solid #ccc; /* граница вокруг вариантов */
+            border-radius: 5px; /* скругленные углы */
+            transition: background-color 0.3s; /* плавный переход цвета */
+        }
+        .options li:hover {
+            background-color: #e9ecef; /* цвет при наведении */
+        }
+        .correct {
+            background-color: #d4edda; /* светло-зеленый */
+            color: #155724; /* темно-зеленый текст */
+        }
+        .incorrect {
+            background-color: #f8d7da; /* светло-красный */
+            color: #721c24; /* темно-красный текст */
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center; /* центрирование текста результата */
+        }
+        button {
+            background-color: #007bff; /* основной цвет кнопок */
+            color: white; /* белый текст */
+            border: none; /* без границ */
+            padding: 10px 15px; /* отступы внутри кнопок */
+            border-radius: 5px; /* скругленные углы */
+            cursor: pointer; /* указатель при наведении */
+            transition: background-color 0.3s; /* плавный переход цвета */
+            margin: 5px; /* отступ между кнопками */
+        }
+        button:hover {
+            background-color: #0056b3; /* цвет кнопки при наведении */
+        }
+        #showResults, #clearResults {
+            display: inline-block; /* отображение кнопок в одной строке */
+        }
+        #savedResults {
+            margin-top: 20px;
+            background-color: #fff; /* белый фон для сохраненных результатов */
+            padding: 15px; /* отступы внутри блока */
+            border: 1px solid #ddd; /* граница вокруг блока */
+            border-radius: 5px; /* скругленные углы */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* легкая тень */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Тест на знание</h1>
+<form id="quizForm">
+    <div class="question">
+        <h2>1. Какой язык используется для веб-разработки?</h2>
+        <ul class="options">
+            <li><input type="radio" name="question1" value="HTML"> HTML</li>
+            <li><input type="radio" name="question1" value="Python"> Python</li>
+            <li><input type="radio" name="question1" value="C++"> C++</li>
+            <li><input type="radio" name="question1" value="Java"> Java</li>
+        </ul>
+    </div>
+    
+    <div class="question">
+        <h2>2. Какой язык программирования является объектно-ориентированным?</h2>
+        <ul class="options">
+            <li><input type="radio" name="question2" value="HTML"> HTML</li>
+            <li><input type="radio" name="question2" value="Python"> Python</li>
+            <li><input type="radio" name="question2" value="CSS"> CSS</li>
+            <li><input type="radio" name="question2" value="SQL"> SQL</li>
+        </ul>
+    </div>
+
+    <div class="question">
+        <h2>3. Какой из следующих языков является языком разметки?</h2>
+        <ul class="options">
+            <li><input type="radio" name="question3" value="HTML"> HTML</li>
+            <li><input type="radio" name="question3" value="Java"> Java</li>
+            <li><input type="radio" name="question3" value="C#"> C#</li>
+            <li><input type="radio" name="question3" value="Ruby"> Ruby</li>
+        </ul>
+    </div>
+    
+    <button type="submit">Отправить</button>
+</form>
+
+<div id="result"></div> <!-- Элемент для вывода результата -->
+<button id="showResults">Показать результаты тестирования</button> <!-- Кнопка для показа результатов -->
+<button id="clearResults">Очистить результаты тестирования</button> <!-- Кнопка для очистки результатов -->
+<div id="savedResults"></div> <!-- Элемент для вывода сохраненных результатов -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
